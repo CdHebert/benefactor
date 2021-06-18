@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 
-const sequelize = require('../config/connection.js');
+const sequelize = require('../config/connection');
 
-class List extends Model {}
+class UserFriend extends Model {}
 
-List.init(
+UserFriend.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,25 +12,28 @@ List.init(
       primaryKey: true,
       autoIncrement: true
     },
-    list_name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    user_id: {
+    u_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'user_id'
       }
-    } 
+    },
+    f_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'friend',
+        key: 'friend_id'
+      }
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'list',
+    modelName: 'user_friend',
   }
 );
 
-module.exports = List;
+module.exports = UserFriend;

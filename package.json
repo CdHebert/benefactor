@@ -1,13 +1,11 @@
 {
   "name": "hacker-news-clone",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "seeds": "node seeds/index.js",
-    "dev": "nodemon sever.js"
-  },
+    "seeds": "node seeds/index.js"
+    },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -24,5 +22,15 @@
   },
   "devDependencies": {
     "jest": "^27.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CdHebert/global-registry.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/CdHebert/global-registry/issues"
+  },
+  "homepage": "https://github.com/CdHebert/global-registry#readme",
+  "description": ""
 }

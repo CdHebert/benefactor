@@ -2,34 +2,25 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-// create our User model
-class User extends Model {
-    // set up method to run on instance data (per user) to check password
-    checkPassword(loginPw) {
-        return bcrypt.compareSync(loginPw, this.password);
-    }
-}
+// create our Friend model
+class Friend extends Model {}
 
-// create fields/columns for User model
-User.init(
+// create fields/columns for Friend model
+Friend.init(
     {
-        user_id: {
+        friend_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
+            references: {
+                model: 'user',
+                key: 'user_id'
+            }
         },
         username: {
             type: DataTypes.STRING,
-            unique: true,
-            allowNull: false,
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [4]
-            }
+            allowNull: false
         },
     },
     {
@@ -49,8 +40,8 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
+        modelName: 'friend'
     }
 );
 
-module.exports = User;
+module.exports = Friend;

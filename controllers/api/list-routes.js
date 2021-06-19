@@ -28,34 +28,32 @@ router.post('/', (req, res) => {
     List.create(req.body).then(lists => res.json(lists)).catch(err => res.json(err))
 });
 
-// update list
-router.put('/:list:listId', (req, res, next) => {
-  List.update (
-    {list_name: req.body.list_name},
-    {returning: true, where: {id: req.params.listId} }
+// update list - currently only list name updates but will add Product 
+router.put('/:listId', (req, res) => {
+  List.update ( req.body, 
+     {where: {id: req.params.listId} }
   )
-  .then(function([ rowsUpdate, [updatedList] ]) {
-    res.json(updatedList)
-  })
-  .catch(next)
+  .then(listData => {
+    res.json(listData)
+  } )
+  .catch(err => res.json(err)) 
  })
 
   // delete list
-  const deleteList = async (req, res) => {
+  router.delete ("/:listId", async (req, res) => {
     try {
-      const { listId } = req.params;
-      const deleted = await models.List.destroy({
-        where: { id: listId }
+    
+      const deleted = await List.destroy({
+        where: { id: req.params.listId }
       });
       if (deleted) {
         return res.status(204).send("List deleted");
       }
-      throw new Error("List not found");
+      // throw new Error("List not found");
     } catch (error) {
       return res.status(500).send(error.message);
     }
-  };
-
+  });
 
 
 module.exports = router;

@@ -6,30 +6,28 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="/" id="logo">Helios</a></h1>
+								<h1><a href="/" id="logo">Benefactor</a></h1>
 								<hr />
-								<p>Another fine freebie by HTML5 UP</p>
+								<p>Get Ready to for your gifts</p>
 							</header>
 							<footer>
-								<a href="/login" class="button circled scrolly">Start</a>
+								<a href="/login" class="button circled scrolly">Login</a>
 							</footer>
 						</div>
 
 					<!-- Nav -->
 						<nav id="nav">
+					 {{#if loggedIn}}
 							<ul>
 								<li><a href="/">Home</a></li>
+								
 								<li>
 									<a href="#">Dropdown</a>
 									<ul>
 										<li><a href="#">Friends Lists</a></li>
 										<li><a href="#">Your Lists</a></li>
-                                         {{#if loggedIn}}
-										
 										<li><a id="logout">Logout</a></li>
-                                        {{else}}
-										<li><a href="/login">Logout</a></li>
-                                        {{/if}}
+                                       
 										{{!-- <li>
 											<a href="#">And a submenu &hellip;</a>
 											<ul>
@@ -42,11 +40,13 @@
 										<li><a href="#">Veroeros feugiat</a></li> --}}
 									</ul>
 								</li>
+								 
 								<!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="no-sidebar.html">No Sidebar</a></li> -->
 							</ul>
 						</nav>
+						{{/if}}
 
 				</div>
 

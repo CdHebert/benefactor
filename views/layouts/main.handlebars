@@ -1,15 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+	<head>
+		<title>Helios by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/stylesheets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/stylesheets/css/noscript.css" /></noscript>
+	</head>
+	<body class="homepage is-preload">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+        
+		
 
-<body>
     {{{ body }}}
+
+    {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+    
+<!-- Scripts -->
+			<script src="/javascript/js/jquery.min.js"></script>
+			<script src="/javascript/js/jquery.dropotron.min.js"></script>
+			<script src="/javascript/js/jquery.scrolly.min.js"></script>
+			<script src="/javascript/js/jquery.scrollex.min.js"></script>
+			<script src="/javascript/js/browser.min.js"></script>
+			<script src="/javascript/js/breakpoints.min.js"></script>
+			<script src="/javascript/js/util.js"></script>
+			<script src="/javascript/js/main.js"></script>
 </body>
 
 </html>

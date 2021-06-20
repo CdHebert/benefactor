@@ -1,6 +1,64 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
 @import url("fontawesome-all.min.css");
 
+/* effects */
+/* Radial In */
+.hvr-radial-in {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(to bottom, gold 0%, black 100%);
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 1.3s;
+	transition-duration: 1.3s;
+  }
+  .hvr-radial-in:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to bottom, black 0%, gold 100%);
+	border-radius: 100%;
+	-webkit-transform: scale(2);
+	transform: scale(2);
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 1.3s;
+	transition-duration: 1.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+  }
+  .hvr-radial-in:hover, .hvr-radial-in:focus, .hvr-radial-in:active {
+	color: white;
+  }
+  .hvr-radial-in:hover:before, .hvr-radial-in:focus:before, .hvr-radial-in:active:before {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+  }
+/* Glow */
+  .hvr-glow {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: box-shadow;
+	transition-property: box-shadow;
+  }
+  .hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+	box-shadow: 0 0 8px rgba(219, 235, 2, 0.747);
+  }
+  
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -2050,7 +2108,7 @@ input, select, textarea {
 	.button {
 		position: relative;
 		display: inline-block;
-		background: #df7366;
+		background: linear-gradient(to bottom, gold 0%, black 100%);
 		color: #fff;
 		text-align: center;
 		border-radius: 0.5em;
@@ -2072,8 +2130,9 @@ input, select, textarea {
 		button:hover,
 		.button:hover {
 			color: #fff;
-			background: #ef8376;
+			background: linear-gradient(to bottom, black 0%, gold 100%);
 		}
+
 
 		input[type="button"].alt,
 		input[type="submit"].alt,
@@ -2171,7 +2230,7 @@ input, select, textarea {
 
 	#header {
 		position: relative;
-		background-image: url("../../images/header.jpg");
+		background-image: url("../../images/newbacking.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -2946,7 +3005,7 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				z-index: 10002;
-				background: #1f1920;
+				background: #0f0d11;
 				box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
 				font-size: 1em;
 			}
@@ -2959,7 +3018,7 @@ input, select, textarea {
 					top: 0;
 					width: 100%;
 					height: 100%;
-					background: url("/images/header.jpg");
+					background: url("../../images/background.jpg");
 					background-size: 128px 128px;
 				}
 

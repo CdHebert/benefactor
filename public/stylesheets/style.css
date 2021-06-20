@@ -15,36 +15,9 @@ body, html {
   color: #333;
 }
 
-body {
-  background: url("../images/onepunch.jpg") no-repeat center center fixed;
-   background-size: cover;
-}
 
-.warning h2 {
-  /* border: 2px solid red; */
-  /* border-radius: 25%; */
-  /* width: fit-content; */
-  /* background: red; */
-  color: yellow;
-}
 
-.warning label{
-  /* border: 2px solid red; */
-  /* border-radius: 25%; */
-  /* width: fit-content; */
-  /* background: red; */
-  color: yellow;
-}
 
-.warning input {
-  background: red;
-  color: yellow;
-}
-
-.warning textarea {
-  background: red;
-  color: yellow;
-}
 
 .post {
   background: yellow;

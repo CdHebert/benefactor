@@ -21,7 +21,7 @@ const sess = {
 
 app.use(session(sess));
 
-//onst helpers = require('./utils/helpers');
+//const helpers = require('./utils/helpers');
 
 //const hbs = exphbs.create({ helpers });
 

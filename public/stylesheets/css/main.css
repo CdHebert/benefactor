@@ -170,6 +170,7 @@ input, select, textarea {
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 		color: inherit;
+		font-family: 'Cinzel Decorative';
 		text-decoration: none;
 		border-bottom-color: transparent;
 	}
@@ -2219,7 +2220,7 @@ input, select, textarea {
 
 	.wrapper {
 		background: #fff;
-		margin: 0 0 2em 0;
+		
 		padding: 6em 0 6em 0;
 	}
 

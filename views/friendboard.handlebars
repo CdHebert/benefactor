@@ -1,0 +1,32 @@
+<div class="header1">
+    <div class="new">
+        <div>
+            <input class="input" type="text" placeholder="Text input">
+        </div>
+    </div>
+</div>
+
+<nav id="nav">
+    <ul>
+        <li><a href="/dashboard">Home</a></li>
+
+        <li>
+            <a href="#">Dropdown</a>
+            <ul>
+                <li><a href="/friendlist">Friends Lists</a></li>
+                <li><a href="/userlist">Your Lists</a></li>
+                <li><a id="logout">Logout</a></li>
+
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <section class="left-flex-view">
+        {{> friends-list}}
+    </section>
+    <aside class="right-flex-view">
+        {{> product-info}}
+    </aside>
+</main>

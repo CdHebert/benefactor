@@ -31,7 +31,7 @@ const { User, List, Friend, UserFriend, Product } = require('../models');
 //     });
 // });
 
-router.get('/dashboard', (req, res) => {
+router.get('/', (req, res) => {
   res.render('dashboard')
 })
 

@@ -12,10 +12,14 @@ body, html {
   
 }
 
-header {
-    padding: 2% 4%;
+.header1 {
+    /* padding: 2% 4%; */
+    padding-top: 4%;
+    padding-bottom: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
     display: flex;
-    background: #0B032D;
+    background: rgb(71, 71, 71);
     color: black;
     font-size: 30px;
     justify-content: space-between;

@@ -31,17 +31,17 @@ const { User, List, Friend, UserFriend, Product } = require('../models');
 //     });
 // });
 
-// router.get('/dashboard', (req, res) => {
-//   res.render('dashboard')
-// })
-
 router.get('/dashboard', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
+  res.render('dashboard')
+})
 
-  res.render('dashboard');
-});
+// router.get('/dashboard', (req, res) => {
+//   if (req.session.loggedIn) {
+//     res.redirect('/');
+//     return;
+//   }
+
+//   res.render('dashboard');
+// });
 
 module.exports = router;

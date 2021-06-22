@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { User, List } = require('../models');
+const { User, List, Friend, UserFriend, Product } = require('../models');
 
 router.get ('/', (req, res) => {
     User.findAll({}).then(results => {
@@ -16,6 +16,43 @@ router.get ('/', (req, res) => {
     });
 });
 
+router.get('/friends', (req, res) => {
+    List.findAll({
+    
+      include: [
+        // {
+        //   model: UserFriend,
+        // },
+        {
+          model: Friend,
+        },
+        {
+            model:List
+        },
+        {
+            model: Product
+        }
+      ]
+    })
+      .then(dbPostData => {
+        if (!dbPostData) {
+          res.status(404).json({ message: 'No friends found' });
+          return;
+        }
+  
+        const User = dbPostData.get({ plain: true });
+  
+        res.render('list-view', {
+          User,
+          loggedIn: req.session.loggedIn
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
 
 
 router.get('/login', (req, res) => {
@@ -27,14 +64,6 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
 
-// router.get('/signup', (req, res) => {
-//     if (req.session.loggedIn) {
-//       res.redirect('/');
-//       return;
-//     }
-  
-//     res.render('signup');
-//   });
 
   
 

@@ -2,11 +2,6 @@
   box-sizing: border-box;
 }
 
-large {
-  height: 25px;
-  width: 25px;
-}
-
 body, html {
   height: 100%;
   padding: 0;
@@ -15,34 +10,9 @@ body, html {
   color: #333;
 }
 
-
-
-
-
-.post {
-  background: yellow;
-  border: red 3px solid;
-  margin: 45px;
-}
-
-.post p {
-  color: red;
-}
-
-.post h3 {
-  background-color: red;
-  color: yellow;
-  border-bottom: 2px solid black;
-}
-
-.comment-div span {
-  color: yellow;
-}
-
 a {
   text-decoration: none;
-  width: fit-content;
-  color: red;
+  color: #225ca3;
   font-weight: bold;
   transition: color .1s;
 }
@@ -139,11 +109,12 @@ main {
   color: #3486eb;
 }
 
-
+.delete-post-btn {
+  background-color: #d41414;
+}
 
 .delete-post-btn:hover {
-  background-color: red;
-  color: yellow;
+  background-color: #ff643d;
 }
 
 .post {
@@ -162,33 +133,32 @@ main {
   margin: -1.5% 0 2% 0;
 }
 
+.upvote-btn {
+  background-color: #197d0f;
+  transition: background-color .1s;
+}
+
+.upvote-btn:hover {
+  background-color: #1f9c13;
+}
+
 .comment-form {
   margin-bottom: 5%;
 }
 
 .comment {
-  background: yellow;
-  color: red;
   padding: 1%;
   margin-bottom: 1%;
 }
 
 .comment:nth-child(odd) {
-  background-color: red;
-  color: yellow;
+  background-color: #fff5eb;
 }
 
 .comment .meta {
   font-size: 90%;
   margin-bottom: .5%;
   opacity: .6;
-  background: red;
-  color: yellow;
-}
-
-.meta span {
-  background: red;
-  color: yellow;
 }
 
 .new-post-form input {
@@ -197,24 +167,6 @@ main {
 
 .edit-post-form {
   margin-bottom: 5%;
-}
-
-.address {
-  border: yellow 3px solid;
-  color: yellow;
-  background-color: red;
-}
-
-.address span {
-  color: yellow;
-}
-
-.address a {
-  color: black;
-}
-
-.address p {
-  color: yellow;
 }
 
 footer {

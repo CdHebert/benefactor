@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Benefactor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		{{> link}}
+		<link rel="stylesheet" href="/stylesheets/css/main.css" />
+		<link rel="stylesheet" href="/stylesheets/css/list-style.css" />
+		<noscript><link rel="stylesheet" href="/stylesheets/css/noscript.css" /></noscript>
+	</head>
+	
+<body>
+		
+			
+    {{{ body }}}
+
+    {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+    
+<!-- Scripts -->
+			<script src="/javascript/js/jquery.min.js"></script>
+			<script src="/javascript/js/jquery.dropotron.min.js"></script>
+			<script src="/javascript/js/jquery.scrolly.min.js"></script>
+			<script src="/javascript/js/jquery.scrollex.min.js"></script>
+			<script src="/javascript/js/browser.min.js"></script>
+			<script src="/javascript/js/breakpoints.min.js"></script>
+			<script src="/javascript/js/util.js"></script>
+			<script src="/javascript/js/main.js"></script>
+</body>
+
+</html>

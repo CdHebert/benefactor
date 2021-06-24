@@ -1,0 +1,30 @@
+    #search-sec {
+        border: none;
+        width: 50%;
+        position: relative;
+        padding: 0px;
+        margin: 50px auto;
+    }
+
+    #suggestion-cont {
+        width: 100%;
+        padding: 10px;
+        box-shadow: 1px 1px 2px 2px#EEE;
+        top: 120%;
+        left: 0px; right: 0px;
+        margin: auto;
+        position: absolute;
+        z-index: 100;
+        background-color: #fff;
+        display: none;
+    }
+
+    #suggestion-cont div {
+        padding: 15px;
+    }
+
+    #suggestion-cont div:hover {
+        cursor: pointer;
+        background-color: rgba(225, 225, 225, .2);
+    }
+

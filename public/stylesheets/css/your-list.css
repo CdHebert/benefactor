@@ -1,0 +1,27 @@
+.registry {
+    padding: 2%;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.registry:nth-child(odd) {
+    background-color: #e4e4e4;
+}
+
+#add-list-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #212931;
+    color: #fff;
+    cursor: pointer;
+}
+
+#add-list-form-cont {
+    width: 50%;
+    margin: auto;
+}
+
+.li-inp {
+    margin-bottom: 20px;
+}

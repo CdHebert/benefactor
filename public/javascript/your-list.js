@@ -73,10 +73,17 @@ async function addNewList(event) {
 
     if (response.ok) {
         document.location.replace('/userlist');
+        fetchUserList();
     } else {
         alert(response.statusText);
     }
 }
 
 document.querySelector('#add-list-form').addEventListener('submit', addNewList);
+
+document.addEventListener('click', (event) => {
+    if(!event.target.matches("#search-form")) {
+        document.querySelector("#suggestion-cont").style.display = "none";
+    }
+})
 

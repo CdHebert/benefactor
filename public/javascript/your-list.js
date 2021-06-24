@@ -59,7 +59,7 @@ document.querySelector("#ad-md-background").addEventListener('click', closeAddLi
 async function addNewList(event) {
     event.preventDefault();
 
-    const list_name = document.querySelector('input[name="list-name"]').value;
+    const list_name = document.querySelector('select[name="lists"]').value;
 
     const response = await fetch(`/api/lists`, {
         method: 'POST',

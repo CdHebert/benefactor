@@ -3,7 +3,7 @@ const {  User, Friend, UserFriend } = require('../../models');
 
 // Find all friends
 // get all users
-router.get('/friends', (req, res) => {
+router.get('/', (req, res) => {
     // find all users
     // be sure to include its associated Lists and Friends
     
@@ -27,7 +27,7 @@ router.get('/friends', (req, res) => {
       });
 });
 
-router.post('/friends', (req, res) => {
+router.post('/', (req, res) => {
     // expects { friend_id: 2, user_id: 3 }
 
     // Find the friend to be added if he/she exists 

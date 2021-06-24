@@ -1,3 +1,12 @@
+		<link rel="stylesheet" href="/stylesheets/css/main.css" />
+		<link rel="stylesheet" href="/stylesheets/css/list-style.css" />
+		<noscript><link rel="stylesheet" href="/stylesheets/css/noscript.css" /></noscript>
+	</head>
+	
+
+
+
+
 <body class="homepage is-preload">
 	<div id="page-wrapper">
 
@@ -8,7 +17,7 @@
 			<div class="inner">
 				<header>
 					<h1><a href="/dashboard" id="logo">Benefactor</a></h1>
-					<hr />
+					<hr class="hr" />
 					<p>Get Ready for your gifts</p>
 				</header>
 				<footer>
@@ -17,36 +26,47 @@
 			</div>
 
 			<!-- Nav -->
+
 			{{#if loggedIn}}
 			<nav id="nav">
 
 				<ul>
 					<li><a href="/dashboard">Home</a></li>
+					<li><a href="/about">About Us</a></li>
+					
 
-					<li>
-						<a href="#">Dropdown</a>
+					<li><a href="/friendlist">Friends Lists</a></li>
+					<li><a href="/userlist">Your Lists</a></li>
+					<li><a id="logout">Logout</a></li>
+
+					{{!-- <li>
+						<a href="#">And a submenu &hellip;</a>
 						<ul>
-							<li><a href="/friendlist">Friends Lists</a></li>
-							<li><a href="/userlist">Your Lists</a></li>
-							<li><a id="logout">Logout</a></li>
 
-							{{!-- <li>
-								<a href="#">And a submenu &hellip;</a>
-								<ul>
-									<li><a href="#">Lorem ipsum dolor</a></li>
-									<li><a href="#">Phasellus consequat</a></li>
-									<li><a href="#">Magna phasellus</a></li>
-									<li><a href="#">Etiam dolore nisl</a></li>
-								</ul> --}}
-								{{!--
-							</li>
-							<li><a href="#">Veroeros feugiat</a></li> --}}
-						</ul>
-					</li>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+							<li><a href="#">Phasellus consequat</a></li>
+							<li><a href="#">Magna phasellus</a></li>
+							<li><a href="#">Etiam dolore nisl</a></li>
+						</ul> --}}
+
+						{{!--
+					</li> --}}
+
+
+					{{!-- </li> --}}
+
 
 					<!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="no-sidebar.html">No Sidebar</a></li> -->
+				</ul>
+			</nav>
+			{{else}}
+			<nav id="nav">
+
+				<ul>
+					<li><a href="/about">About Us </a></li>
+
 				</ul>
 			</nav>
 			{{/if}}

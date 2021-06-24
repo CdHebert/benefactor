@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="/stylesheets/css/main.css" />
+<link rel="stylesheet" href="/stylesheets/css/list-style.css" />
+<noscript>
+    <link rel="stylesheet" href="/stylesheets/css/noscript.css" />
+</noscript>
+</head>
+
+
+
+
+<body>
+
+
+
+    <div id="page-wrapper" class="bg-img">
+
+        <!-- Header -->
+        {{#if loggedIn}}
+        <nav id="nav">
+
+            <ul>
+                <li><a href="/about">About Us</a></li>
+
+
+
+                <li><a href="/friendlist">Friends Lists</a></li>
+                <li><a href="/userlist">Your Lists</a></li>
+                <li><a id="logout">Logout</a></li>
+
+
+
+                <!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li> -->
+            </ul>
+        </nav>
+        {{/if}}
+
+
+        <!-- Main -->
+        <div class="wrapper style1">
+            <div class="container-fluid">
+                <article id="main" class="special">
+                    <header>
+                        <h2>Personal List</h2>
+                        <ul class="actions special-1">
+                            <li><a href="#" class="button">Full Story</a></li>
+                        </ul>
+                        <hr />
+                    </header>
+
+                </article>
+                <div class="row">
+                    <article class="col-4 col-12-mobile special">
+                        <a href="https://www.amazon.com/s?k=home+office&ref=nb_sb_noss_1" class="image featured"><img
+                                src="images/home-office.jpg" alt="" /></a>
+                        <header>
+                            <h3><a href="">home office</a></h3>
+                        </header>
+
+                    </article>
+                    <article class="col-4 col-12-mobile special">
+                        <a href="#" class="image featured"><img src="images/home-office.jpg" alt="" /></a>
+                        <header>
+                            <h3><a href="#">Sed quis rhoncus placerat</a></h3>
+                        </header>
+
+                    </article>
+                    <article class="col-4 col-12-mobile special">
+                        <a href="#" class="image featured"><img src="images/home-office.jpg" alt="" /></a>
+                        <header>
+                            <h3><a href="#">Magna laoreet et aliquam</a></h3>
+                        </header>
+
+                    </article>
+                </div>
+
+                <div class="row">
+                    <article class="col-4 col-12-mobile special">
+                        <a href="#" class="image featured"><img src="images/splash.jpg" alt="" /></a>
+                        <header>
+                            <h3><a href="#">Gravida aliquam penatibus</a></h3>
+                        </header>
+
+                    </article>
+                    <article class="col-4 col-12-mobile special">
+                        <a href="#" class="image featured"><img src="images/splash.jpg" alt="" /></a>
+                        <header>
+                            <h3><a href="#">Sed quis rhoncus placerat</a></h3>
+                        </header>
+
+                    </article>
+                    <article class="col-4 col-12-mobile special">
+                        <a href="#" class="image featured"><img src="images/splash.jpg" alt="" /></a>
+                        <header>
+                            <h3><a href="#">Magna laoreet et aliquam</a></h3>
+                        </header>
+
+                    </article>
+                </div>
+
+                <div class="row">
+                    <article class="col-4 col-12-mobile special">
+                        <a href="#" class="image featured"><img src="images/gaming.jpg" alt="" /></a>
+                        <header>
+                            <h3><a href="#">Gaming</a></h3>
+                        </header>
+
+                    </article>
+                    <article class="col-4 col-12-mobile special">
+                        <a href="#" class="image featured"><img src="images/gaming.jpg" alt="" /></a>
+                        <header>
+                            <h3><a href="#">Sed quis rhoncus placerat</a></h3>
+                        </header>
+
+                    </article>
+                    <article class="col-4 col-12-mobile special">
+                        {{> products}}
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </div>

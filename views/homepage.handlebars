@@ -12,8 +12,9 @@
 
 		<!-- Header -->
 		<div id="header">
-
+			{{#if loggedIn}}
 			<!-- Inner -->
+			{{else}}
 			<div class="inner">
 				<header>
 					<h1><a href="/dashboard" id="logo">Benefactor</a></h1>
@@ -25,6 +26,7 @@
 				</footer>
 			</div>
 
+			{{/if}}
 			<!-- Nav -->
 
 			{{#if loggedIn}}

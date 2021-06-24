@@ -27,14 +27,15 @@
         <!-- Lists -->
         <section id="registries" style="overflow-x: hidden;">
             <h4 class="subtitle is-4">Lists</h4>
-            <div id="add-list-icon"
-                class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center mt-4 mb-4">
+            <div id="add-list-icon" class="is-flex is-justify-content-center is-align-items-center mt-4 mb-4">
                 <i class="fa fa-plus"></i>
             </div>
             {{#each lists as |list|}}
                 <div class="registry">
-                    <div class="text">{{list_name}}</div>
-                    <div class="meta">{{format_date created_at}}</div>
+                    <a href="userlist/list/{{id}}">
+                        <div class="text">{{list_name}}</div>
+                        <div class="meta">{{format_date created_at}}</div>
+                    </a>
                 </div>
             {{/each}}
         </section>

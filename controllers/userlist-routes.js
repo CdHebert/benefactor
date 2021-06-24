@@ -26,7 +26,28 @@ router.get('/', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
-})
+});
+
+router.get('/list/:id', (req, res) => {
+    // find one
+    // be sure to include its associated Products
+    List.findOne({
+        where: {
+            id: req.params.id,
+        },
+        include: [Product]
+    }).then(results => {
+        const list = results.get({ plain: true });
+        console.log(list)
+        res.render('product-page', {
+            list,
+            loggedIn: req.session.loggedIn
+        });
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 
 module.exports = router;

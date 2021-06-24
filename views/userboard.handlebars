@@ -1,5 +1,7 @@
 {{!-- userlist --}}
 <link rel="stylesheet" href="/list-assets/assets/css/main.css" />
+<link rel="stylesheet" href="/stylesheets/css/search.css" />
+<link rel="stylesheet" href="/stylesheets/css/your-list.css" />
 <noscript>
     <link rel="stylesheet" href="/list-assets/assets/css/noscript.css" />
 </noscript>
@@ -12,115 +14,56 @@
 
     <div id="main">
         <div class="header1">
+            <nav id="nav-1">
+                <ul>
+                    <li><a href="/dashboard">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/friendlist">Friends Lists</a></li>
+                    <li><a href="/userlist">Your Lists</a></li>
+                    <li><a id="logout">Logout</a></li>
 
-    <nav id="nav-1">
-        <ul>
-            <li><a href="/dashboard">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/friendlist">Friends Lists</a></li>
-            <li><a href="/userlist">Your Lists</a></li>
-            <li><a id="logout">Logout</a></li>
-
-        </ul>
-    </nav>
-
-    <!-- Main -->
-
-            <div class="new">
-                <div>
-                    <input class="input" type="text" placeholder="Text input">
-                </div>
-            </div>
+                </ul>
+            </nav>
         </div>
 
-        <!-- Featured Post -->
-        <article class="post featured">
-            <header class="major">
+        <h2 style="text-align: center;">Welcome to Your Own List Page</h2>
 
-                <h2>Welcome to Your<br />
-                    Own List Page</a></h2>
-                <hr />
-            </header>
-            <h2> Personal </h2>
-            <a href="#" class="image main"><img src="/images/home-office.jpg" alt="" /></a>
-            <ul class="actions special">
-                <li><a href="/personal" class="button large">Add To List</a></li>
-            </ul>
-        </article>
-
-        <!-- Posts -->
-        <section class="posts">
-            <article>
-                <header>
-                    <span class="date">April 24, 2017</span>
-                    <h2><a href="#"> Gaming </a></h2>
-                </header>
-                <a href="#" class="image fit"><img src="/images/gaming.jpg" alt="" /></a>
-
-                <ul class="actions special">
-                    <li><a href="/gaming" class="button">Add To List</a></li>
-                </ul>
-            </article>
-            <article>
-                <header>
-                    <span class="date">April 22, 2017</span>
-                    <h2><a href="#">Gaming</a></h2>
-                </header>
-                <a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-
-                <ul class="actions special">
-                    <li><a href="#" class="button">Full Story</a></li>
-                </ul>
-            </article>
-            <article>
-                <header>
-                    <span class="date">April 18, 2017</span>
-                    <h2><a href="#">Ante mattis<br />
-                            interdum dolor</a></h2>
-                </header>
-                <a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-
-                <ul class="actions special">
-                    <li><a href="#" class="button">Full Story</a></li>
-                </ul>
-            </article>
-            <article>
-                <header>
-                    <span class="date">April 14, 2017</span>
-                    <h2><a href="#">Tempus sed<br />
-                            nulla imperdiet</a></h2>
-                </header>
-                <a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-
-                <ul class="actions special">
-                    <li><a href="#" class="button">Full Story</a></li>
-                </ul>
-            </article>
-            <article>
-                <header>
-                    <span class="date">April 11, 2017</span>
-                    <h2><a href="#">Odio magna<br />
-                            sed consectetur</a></h2>
-                </header>
-                <a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-
-                <ul class="actions special">
-                    <li><a href="#" class="button">Full Story</a></li>
-                </ul>
-            </article>
-            <article>
-                <header>
-                    <span class="date">April 7, 2017</span>
-                    <h2><a href="#">Augue lorem<br />
-                            primis vestibulum</a></h2>
-                </header>
-                <a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-
-                <ul class="actions special">
-                    <li><a href="#" class="button">Full Story</a></li>
-                </ul>
-            </article>
+        <!-- Search -->
+        <section id="search-sec">
+            <input id="search-form" class="input is-rounded" type="text" placeholder="Search for lists">
+            <div id="suggestion-cont"></div>
         </section>
+
+        <!-- Lists -->
+        <section id="registries" style="overflow-x: hidden;">
+            <h4 class="subtitle is-4">Lists</h4>
+            <div id="add-list-icon"
+                class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center mt-4 mb-4">
+                <i class="fa fa-plus"></i>
+            </div>
+            {{#each lists as |list|}}
+                <div class="registry">
+                    <div class="text">{{list_name}}</div>
+                    <div class="meta">{{format_date created_at}}</div>
+                </div>
+            {{/each}}
+        </section>
+        <div id="add-list-modal" class="modal">
+            <div id="ad-md-background" class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head is-flex is-align-items-center">
+                    <p class="modal-card-title">Add a list</p>
+                </header>
+                <section class="modal-card-body">
+                    <form id="add-list-form">
+                        <div class="li-inp">
+                            <input class="input is-normal" name="list-name" type="text" placeholder="Enter the name of the list">
+                        </div>
+                        <button type="submit" class="button is-medium is-fullwidth">Add to your list</button>
+                    </form>
+                </section>
+            </div>
+        </div>
 
 
         <!-- Scripts -->
@@ -131,3 +74,4 @@
         <script src="/list-assets/assets/js/breakpoints.min.js"></script>
         <script src="/list-assets/assets/js/util.js"></script>
         <script src="/list-assets/assets/js/main.js"></script>
+        <script src="/javascript/your-list.js"></script>

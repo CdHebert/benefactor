@@ -13,30 +13,33 @@
 
 
     <div id="main">
-
+        
         {{> header}}
 
         <h2 style="text-align: center;">Welcome to Your Own List Page</h2>
-       
+
+        <!-- Search -->
+        <section id="search-sec">
+            <input id="search-form" class="input is-rounded" type="text" placeholder="Search for lists">
+            <div id="suggestion-cont"></div>
+        </section>
 
         <!-- Lists -->
         <section id="registries" style="overflow-x: hidden;">
             <h4 class="subtitle is-4">Lists</h4>
-            <div id="add-list-icon"
-                class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center mt-4 mb-4">
+            <div id="add-list-icon" class="is-flex is-justify-content-center is-align-items-center mt-4 mb-4">
                 <i class="fa fa-plus"></i>
             </div>
             {{#each lists as |list|}}
-            
-            <article class="post featured registry">
-         
-            <h2 id="{{list_name}}"> {{list_name}} </h2>
-            <span>{{format_date created_at}}</span>
-            <a href="#" class="image main"><img src="/images/{{list_name}}.jpg" alt="" /></a>
-            <ul class="actions special">
-                <li><a href="/{{list_name}}" class="button large">Look At List</a></li>
-            </ul>
-            </article>
+                <article class="posts container registry">
+
+                    <h2 id="{{list_name}}"> {{list_name}} </h2>
+                    <span>{{format_date created_at}}</span>
+                    <a href="userlist/list/{{id}}" class="image fit"><img src="/images/{{list_name}}.jpg" alt="" /></a>
+                    <ul class="actions special">
+                        <li><a href="userlist/list/{{id}}" class="button large">Look At List</a></li>
+                    </ul>
+                </article>
             {{/each}}
         </section>
         <div id="add-list-modal" class="modal">
@@ -48,18 +51,18 @@
                 <section class="modal-card-body">
                     <form id="add-list-form">
                         <div class="li-inp">
-                            <label for="lists">Select from Lists below</label>
-                                <select name="lists" id="lists">
-                                    <option>Drop Down</option>
-                                    <option value="personal">Personal</option>
-                                    <option value="gaming">Gaming</option>
-                                    <option value="school">School</option>
-                                    <option value="wedding">Wedding</option>
-                                    <option value="anniversary">Anniversary</option>
-                                    <option value="graduation">Graduation</option>
-                                    <option value="special-event">Special Event</option>
-                                </select>
-                                
+                           <label for="lists">Select from Lists below</label>
+                            <select name="lists" id="lists">
+                                <option value="">Drop Down<i class="fas fa-arrow-down"></i></option>
+                                <option value="personal">Personal</option>
+                                <option value="gaming">Gaming</option>
+                                <option value="school">School</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="graduation">Graduation</option>
+                                <option value="special-event">Special Event</option>
+                            </select>
+
                         </div>
                         <button type="submit" class="button is-medium is-fullwidth">Add to your list</button>
                     </form>

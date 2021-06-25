@@ -10,6 +10,15 @@ router.get('/', (req, res) => {
   // find all lists
   // be sure to include its associated Products
   List.findAll({
+    where: {
+        user_id: req.session.user_id
+    },
+    attributes: [
+        'id',
+        'list_name',
+        'user_id',
+        'created_at'
+    ],
     include: [Product]
   }).then(lists => res.json(lists)).catch(err => res.json(err))
 });
@@ -27,8 +36,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', withAuth, (req, res) => {
   // create
-  console.log("user id",req.session.user_id)
-    List.create({list_name: req.body.list_name, user_id:  req.session.user_id}).then(lists => res.json(lists)).catch(err => res.json(err))
+    List.create({list_name: req.body.list_name, user_id:  req.session.user_id}).then(list => res.json(list)).catch(err => res.json(err))
 });
 
 // update list - currently only list name updates but will add Product 

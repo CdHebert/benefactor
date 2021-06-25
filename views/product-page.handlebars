@@ -1,0 +1,75 @@
+{{!-- userlist --}}
+<link rel="stylesheet" href="/list-assets/assets/css/main.css" />
+<link rel="stylesheet" href="/stylesheets/css/products.css" />
+<noscript>
+    <link rel="stylesheet" href="/list-assets/assets/css/noscript.css" />
+</noscript>
+
+
+<body>
+
+
+
+
+    <div id="main">
+        {{> header}}
+
+        <!-- List title -->
+        <div>
+            <h2 class="has-text-centered" style="border: none;">{{ list.list_name }} list</h2>
+            <div class="is-flex is-flex-direction-column is-align-items-left is-justify-content-center mt-6 mb-4">
+                <h4 class="subtitle is-4 w-100">Products</h4>
+                <i  id="add-product-icon" class="fa fa-plus"></i>
+            </div>
+        </div>
+        <!-- Posts -->
+        <section class="posts">
+            {{#each list.products as |product|}}
+            <article>
+                <header>
+                    <h2><a href="#"> {{product_name}} </a></h2>
+                </header>
+                <a class="image fit"><img src={{image_link}} alt="" /></a>
+
+                <ul class="actions special">
+                    <li><a href={{store_link}} class="button" target="_blank">Go to store</a></li>
+                </ul>
+            </article>
+            {{/each}}
+        </section>
+        <div id="add-product-modal" class="modal">
+            <div id="ap-md-background" class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Add product</p>
+                </header>
+                <section class="modal-card-body">
+                    <form id="add-product-form">
+                        <div class="pro-inp">
+                            <p>Product name</p>
+                            <input class="input is-normal" type="text" name="product-name">
+                        </div>
+                        <div class="pro-inp">
+                            <p>Product image link</p>
+                            <input class="input is-normal" type="text" name="image-link">
+                        </div>
+                        <div class="pro-inp">
+                            <p>Store link</p>
+                            <input class="input is-normal" type="text" name="store-link">
+                        </div>
+                        <button id="ap-sub-btn" type="submit" class="button is-medium is-fullwidth" data-list-id={{list.id}}>Add product</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+
+        <!-- Scripts -->
+        <script src="/list-assets/assets/js/jquery.min.js"></script>
+        <script src="/list-assets/assets/js/jquery.scrollex.min.js"></script>
+        <script src="/list-assets/assets/js/jquery.scrolly.min.js"></script>
+        <script src="/list-assets/assets/js/browser.min.js"></script>
+        <script src="/list-assets/assets/js/breakpoints.min.js"></script>
+        <script src="/list-assets/assets/js/util.js"></script>
+        <script src="/list-assets/assets/js/main.js"></script>
+        <script src="/javascript/products.js"></script>

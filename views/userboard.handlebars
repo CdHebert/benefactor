@@ -31,12 +31,17 @@
                 <i class="fa fa-plus"></i>
             </div>
             {{#each lists as |list|}}
-                <div class="registry">
-                    <a href="userlist/list/{{id}}">
-                        <div class="text">{{list_name}}</div>
-                        <div class="meta">{{format_date created_at}}</div>
-                    </a>
-                </div>
+
+                <article class="posts container registry">
+
+                    <h2 id="{{list_name}}"> {{list_name}} </h2>
+                    <span>{{format_date created_at}}</span>
+                    <a href="userlist/list/{{id}}" class="image fit"><img src="/images/{{list_name}}.jpg" alt="" /></a>
+                    <ul class="actions special">
+                        <li><a href="userlist/list/{{id}}" class="button large">Look At List</a></li>
+                    </ul>
+                </article>
+
             {{/each}}
         </section>
         <div id="add-list-modal" class="modal">
@@ -48,7 +53,18 @@
                 <section class="modal-card-body">
                     <form id="add-list-form">
                         <div class="li-inp">
-                            <input class="input is-normal" name="list-name" type="text" placeholder="Enter the name of the list">
+                           <label for="lists">Select from Lists below</label>
+                            <select name="lists" id="lists">
+                                <option value="">Drop Down<i class="fas fa-arrow-down"></i></option>
+                                <option value="personal">Personal</option>
+                                <option value="gaming">Gaming</option>
+                                <option value="school">School</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="graduation">Graduation</option>
+                                <option value="special-event">Special Event</option>
+                            </select>
+
                         </div>
                         <button type="submit" class="button is-medium is-fullwidth">Add to your list</button>
                     </form>

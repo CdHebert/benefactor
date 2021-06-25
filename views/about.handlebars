@@ -1,0 +1,237 @@
+<link rel="stylesheet" href="/stylesheets/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="/stylesheets/css/main.css" />
+<noscript>
+    <link rel="stylesheet" href="/stylesheets/css/noscript.css" />
+</noscript>
+</head>
+
+<body class="left-sidebar is-preload">
+    <div id="page-wrapper">
+
+
+
+        <!-- Nav -->
+
+        {{#if loggedIn}}
+        <nav id="nav">
+
+            <ul>
+                <li><a href="/dashboard">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/userlist">Your Lists</a></li>
+                <li><a id="logout">Logout</a></li>
+
+                {{!-- <li>
+                    <a href="#">And a submenu &hellip;</a>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Phasellus consequat</a></li>
+                        <li><a href="#">Magna phasellus</a></li>
+                        <li><a href="#">Etiam dolore nisl</a></li>
+                    </ul> --}}
+
+                    {{!--
+                </li> --}}
+
+
+                {{!-- </li> --}}
+
+                <!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li> -->
+            </ul>
+        </nav>
+        {{else}}
+        <nav id="nav">
+
+            <ul>
+                <li><a href="/about">About Us </a></li>
+
+            </ul>
+        </nav>
+        {{/if}}
+    </div>
+
+    <!-- Main -->
+    <div class="wrapper style1">
+
+        <div class="container">
+            <div class="row gtr-200">
+                <div class="col-4 col-12-mobile" id="sidebar">
+                    <hr class="first" />
+                    <section>
+                        <header>
+                            <h3><a href="#">Are You Ready To Give?</a></h3>
+                        </header>
+                        <p>
+                            Welcome to the most immersive and complete experience in gift giving you will ever have! On
+                            Benefactor, we make gift buying fun! Have a birthday coming up? A wedding?
+                            Christmas?! Gift giving will no longer be a challenge with Benefactor. Our simple yet
+                            effective wish lists created by family, friends, and anyone in between makes it
+                            easy as 1, 2, 3 to get the perfect gift for someone. Find the profile for the person you are
+                            shopping for and get access to their wish lists. Lists can vary from birthday wishes,
+                            christmas wishes, or even a wish list for a particular company or favorite store. Users are
+                            encouraged to make multiple lists with varied gift prices so there will always be options
+                            for every budget! You found the perfect gift?! Click on the gift's link and you be guided
+                            directly to the buying page for fast and easy checkout.
+                           
+                        <header>
+                            <h3><a href="#"></a>Are You Ready To Receive?</a></h3>
+                        </header>
+
+                        Sign up and create a user profile complete with wish lists for any event in your life. Want
+                        those obscure retro glasses from Amazon? Or a pair of utterly adorable oven mitts from
+                        Crate & Barrel? Put those and so much more on your lists to let everyone know
+                        exactly what you want! Friends and family will no longer have to guess what you might want
+                        for a gift. Once a gift is purchased on one of your wish lists, it is shown as purchased to
+                        your friends and family, but still a secret to you!
+                        <hr />
+                        <h3><a href="#"></a>Bring a little joy into someone's life with a gift they will absolutely love
+                            with Benefactor </a></h3>
+
+                        </p>
+
+                    </section>
+                    <hr />
+                  
+                </div>
+                <div class="col-8 col-12-mobile imp-mobile" id="content">
+                    <article id="main">
+                        <header>
+
+                            {{#if loggedIn}}
+                            <h2><a href="/dashboard">Benefactor</a></h2>
+                            {{else}}
+                            <h2><a href="/">Benefactor</a></h2>
+                            {{/if}}
+                            <p>
+                                We bring joy to everyone!
+                            </p>
+                        </header>
+                        <a class="image featured"><img src="images/gift-about.jpg" alt="" /></a>
+                        <section>
+                            <header>
+                                <h3>How to use our wish lists</h3>
+                            </header>
+                            <ol>
+                                <li>Create Your Account</li>
+                                <li>Go to Your Lists</li>
+                                <li>Add A List with the plus icon</li>
+                                <li>click on look at your list button</li>
+                                <li>Add items to your List with the plus icon</li>
+                                <li>type in the name of the product</li>
+                                <li>type in the link to whatever site you are looking at</li>
+                                <li>(optional) add link to a picture for that item if no link chosen then a random image will take it's place</li>
+                                <li>Click add to list to add the product to the list</li>
+                            </ol>
+                        </section>
+                        <section>
+                            <header>
+                                <h3>Augue euismod feugiat tempus</h3>
+                            </header>
+                            <p>
+                                Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget
+                                imperdiet venenatis
+                                feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent
+                                iaculis. Fermentum elit
+                                ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit
+                                malesuada ante
+                                egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis
+                                pharetra magna.
+                            </p>
+                        </section>
+                    </article>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <article class="col-4 col-12-mobile special">
+                    <a href="#" class="image featured"><img src="images/pic1.png" alt="" /></a>
+                    <header>
+                        <h3><a href="#">The Team that built it</a></h3>
+                    </header>
+                    <p>
+                        Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor
+                        etiam
+                        porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat
+                        integer interdum.
+                    </p>
+                </article>
+                <article class="col-4 col-12-mobile special">
+                    <a href="#" class="image featured"><img src="images/pic2.jpg" alt="" /></a>
+                    <header>
+                        <h3><a href="#">The Reason We Built It</a></h3>
+                    </header>
+                    <p>
+                        Benefactor was created to be an all inclusive gift buying experience. Created to remove the stress and guess work in picking a gift for a friend or loved one.
+                        We believe in good karma, and to give is just as wonderful as it is to receive. Benefactor will always encourage it's users to Make Someones Day, whether it's a very small 
+                        token towards an anonymous user, or buying a gift on someone's list. Benefactor will also always encourage it's users to keep adding gifts to their lists, because it is just as important to remember self love and the ability to treat yourself!
+
+                    </p>
+                </article>
+                <article class="col-4 col-12-mobile special">
+                    <a href="#" class="image featured"><img src="images/pic3.png" alt="" /></a>
+                    <header>
+                        <h3><a href="#">What the future holds</a></h3>
+                    </header>
+                    <p>
+                        We hope in the future with more time and dedication we can create a full shopping and gifting experience. Focusing on both the giving and receiving sides of Benefactor, we hope to also make the website very user friendly and capable of working in tandem with major social networking websites. We want users to easily and flawlessly create wish lists, as well as easily share them with family and friends. Simplicity & Joy are what we are striving for, and it is all possible with Benefactor. 
+                    </p>
+                </article>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+
+
+
+
+
+        <hr />
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Contact -->
+                <section class="contact">
+                    <header>
+                        <h3>Nisl turpis nascetur interdum?</h3>
+                    </header>
+                    <p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor
+                        aliquet.</p>
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+                        </li>
+                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+                        </li>
+                        <li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a>
+                        </li>
+                        <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+                        <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Copyright -->
+                <div class="copyright">
+                    <ul class="menu">
+                        <li>&copy;2021 Benefactor All rights reserved.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+
+
+    </html>

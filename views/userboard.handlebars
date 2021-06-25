@@ -31,6 +31,7 @@
                 <i class="fa fa-plus"></i>
             </div>
             {{#each lists as |list|}}
+
                 <article class="posts container registry">
 
                     <h2 id="{{list_name}}"> {{list_name}} </h2>
@@ -40,6 +41,7 @@
                         <li><a href="userlist/list/{{id}}" class="button large">Look At List</a></li>
                     </ul>
                 </article>
+
             {{/each}}
         </section>
         <div id="add-list-modal" class="modal">

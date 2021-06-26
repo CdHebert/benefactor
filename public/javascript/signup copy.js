@@ -15,7 +15,7 @@
       });
   
       if (response.ok) {
-        document.location.replace('/main');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }

@@ -13,7 +13,7 @@
 
 
     <div id="main">
-        
+
         {{> header}}
 
         <h2 style="text-align: center;">Welcome to Your List Page</h2>
@@ -24,22 +24,33 @@
             <div id="suggestion-cont"></div>
         </section>
 
-        <!-- Lists -->
-        <section id="registries" style="overflow-x: hidden;">
+        <section style="overflow-x: hidden;">
             <h4 class="subtitle is-4">Lists</h4>
             <div id="add-list-icon" class="is-flex is-justify-content-center is-align-items-center mt-4 mb-4">
                 <i class="fa fa-plus"></i>
             </div>
-            {{#each lists as |list|}}
-                <article class="posts container registry">
+        </section>
 
-                    <h2 id="{{list_name}}"> {{list_name}} </h2>
-                    <span>{{format_date created_at}}</span>
-                    <a href="userlist/list/{{id}}" class="image fit"><img src="/images/{{list_name}}.jpg" alt="" /></a>
-                    <ul class="actions special">
-                        <li><a href="userlist/list/{{id}}" class="button large">Look At List</a></li>
-                    </ul>
-                </article>
+        <!-- Lists -->
+        <section id="registries" class="posts" >
+            
+            {{#each lists as |list|}}
+            <article class="registry">
+
+                <h2 id="{{list_name}}"> {{list_name}} </h2>
+                
+                <a href="userlist/list/{{id}}" class="image fit"><img src="/images/{{list_name}}.jpg" alt="" /></a>
+                <ul class="actions special">
+                    <li><a href="userlist/list/{{id}}" class="button large">Look At List</a></li>
+                </ul>
+            </article>
+            {{!-- <article class="col-4 col-12-mobile special">
+                <a href="userlist/list/{{id}}" class="image fit"><span>{{format_date created_at}}</span>
+                    <img src="/images/{{list_name}}.jpg" alt="" />{{list_name}}</a>
+                <header>
+                    <h3 id="{{list_name}}"><a href="userlist/list/{{id}}">{{list_name}}</a></h3>
+                </header>
+            </article> --}}
             {{/each}}
         </section>
         <div id="add-list-modal" class="modal">
@@ -51,7 +62,7 @@
                 <section class="modal-card-body">
                     <form id="add-list-form">
                         <div class="li-inp">
-                           <label for="lists">Select from Lists below</label>
+                            <label for="lists">Select from Lists below</label>
                             <select name="lists" id="lists">
                                 <option value="">Drop Down<i class="fas fa-arrow-down"></i></option>
                                 <option value="personal">Personal</option>

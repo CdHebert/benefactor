@@ -3955,7 +3955,7 @@ input, select, textarea {
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
-			display: flex;
+			display: inline-flex;
 			-moz-flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
 			-ms-flex-wrap: wrap;
@@ -3985,8 +3985,8 @@ input, select, textarea {
 			}
 
 			#main > .posts > * {
-				padding: 4rem;
-				width: 50%;
+				padding: 0 4rem 0 4rem;
+				width: 33%;
 			}
 
 			#main > .posts > article {

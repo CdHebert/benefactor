@@ -1,22 +1,13 @@
-<html>
+<html class="is-flex is-flex-direction-column" style=" margin: 0px padding: 0px;">
 	<head>
 		<title>Benefactor</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		{{> link}}
-		<link rel="stylesheet" href="/stylesheets/css/main.css" />
-		<link rel="stylesheet" href="/stylesheets/css/list-style.css" />
-		<noscript><link rel="stylesheet" href="/stylesheets/css/noscript.css" /></noscript>
-	</head>
-	
-<body>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 		
 			
     {{{ body }}}
 
-    {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
     
 <!-- Scripts -->
 			<script src="/javascript/js/jquery.min.js"></script>
@@ -27,6 +18,9 @@
 			<script src="/javascript/js/breakpoints.min.js"></script>
 			<script src="/javascript/js/util.js"></script>
 			<script src="/javascript/js/main.js"></script>
+    {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>

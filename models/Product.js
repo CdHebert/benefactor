@@ -19,6 +19,14 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    image_link: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    store_link: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
     list_id: {
       type: DataTypes.INTEGER,
       references: {

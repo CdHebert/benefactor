@@ -59,6 +59,13 @@
 	box-shadow: 0 0 8px rgba(219, 235, 2, 0.747);
   }
   
+.bg-img {
+	background-image: grey;
+}
+
+* {
+	font-family: 'Cinzel Decorative';
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -140,7 +147,7 @@ input, select, textarea {
 		color: #5b5b5b;
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Cinzel Decorative', sans-serif;
 		font-weight: 300;
 	}
 
@@ -158,7 +165,7 @@ input, select, textarea {
 	input, textarea, select {
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Cinzel Decorative', sans-serif;
 		font-weight: 300;
 	}
 
@@ -202,18 +209,14 @@ input, select, textarea {
 	}
 
 	a {
-		color: inherit;
-		border-bottom: solid 1px rgba(128, 128, 128, 0.15);
-		text-decoration: none;
-		-moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		-webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		-ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		color: #212931;
+		border-bottom-color: rgba(33, 41, 49, 0.5);
+		font-family: 'Cinzel Decorative'
 	}
 
 		a:hover {
-			color: #ef8376;
 			border-bottom-color: transparent;
+			color: #efeb18  !important;
 		}
 
 	sub {
@@ -321,7 +324,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 700px) {
 
 			.container {
 				width: 100%;
@@ -1552,7 +1555,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 700px) {
 
 			.row {
 				display: flex;
@@ -1991,7 +1994,7 @@ input, select, textarea {
 			}
 
 				ul.icons li a:hover {
-					color: #ef8376;
+					color: #efeb18;
 				}
 
 /* Form */
@@ -2111,7 +2114,6 @@ input, select, textarea {
 	.button {
 		position: relative;
 		display: inline-block;
-		background: linear-gradient(to bottom, white 0%, gold 100%);
 		color: #fff;
 		text-align: center;
 		border-radius: 0.5em;
@@ -2179,7 +2181,7 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'Cinzel Decorative';
 			font-weight: 400;
 		}
 
@@ -2197,7 +2199,7 @@ input, select, textarea {
 		}
 
 		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
+			font-family: 'Cinzel Decorative';
 		}
 
 		.icon.circled {
@@ -2477,6 +2479,216 @@ input, select, textarea {
 				border-bottom: solid 0.75em rgba(255, 255, 255, 0.975);
 				border-left: solid 0.75em rgba(64, 64, 64, 0);
 				border-right: solid 0.75em rgba(64, 64, 64, 0);
+			}
+
+
+			/* Actions */
+
+	ul.actions {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		cursor: default;
+		list-style: none;
+		margin-left: -1rem;
+		padding-left: 0;
+	}
+
+		ul.actions li {
+			padding: 0 0 0 1rem;
+			vertical-align: middle;
+		}
+
+		ul.actions.special-1 {
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			width: 100%;
+			margin-left: 0;
+		}
+
+			ul.actions.special-1 li:first-child {
+				padding-left: 0;
+			}
+
+			/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button-1 {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		border: 0;
+		border-radius: 0;
+		cursor: pointer;
+		display: inline-block;
+		font-family: 'Cinzel Decorative' , Helvetica, sans-serif;
+		font-size: 0.8rem;
+		font-weight: 900;
+		letter-spacing: 0.075em;
+		height: 3rem;
+		line-height: 3rem;
+		padding: 0 2rem;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		input[type="button"].icon:before,
+		button.icon:before,
+		.button-1.icon:before {
+			margin-right: 0.5rem;
+		}
+
+		input[type="submit"].icon.solo,
+		input[type="reset"].icon.solo,
+		input[type="button"].icon.solo,
+		button.icon.solo,
+		.button-1.icon.solo {
+			position: relative;
+			width: 4rem;
+			height: 4rem;
+			line-height: 4rem;
+			border-radius: 4rem;
+			text-indent: 4rem;
+			overflow: hidden;
+			padding: 0;
+			white-space: nowrap;
+		}
+
+			input[type="submit"].icon.solo:before,
+			input[type="reset"].icon.solo:before,
+			input[type="button"].icon.solo:before,
+			button.icon.solo:before,
+			.button-1.icon.solo:before {
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				width: inherit;
+				height: inherit;
+				line-height: inherit;
+				font-size: 1.25rem;
+				margin-right: 0;
+				text-align: center;
+				text-indent: 0;
+			}
+
+		input[type="submit"].fit,
+		input[type="reset"].fit,
+		input[type="button"].fit,
+		button.fit,
+		.button-1.fit {
+			width: 100%;
+		}
+
+		input[type="submit"].small,
+		input[type="reset"].small,
+		input[type="button"].small,
+		button.small,
+		.button-1.small {
+			font-size: 0.7rem;
+			height: 2.5rem;
+			line-height: 2.5rem;
+			padding: 0 1.5rem;
+		}
+
+		input[type="submit"].large,
+		input[type="reset"].large,
+		input[type="button"].large,
+		button.large,
+		.button-1.large {
+			font-size: 0.9rem;
+			height: 3.5rem;
+			line-height: 3.5rem;
+			padding: 0 2.75rem;
+		}
+
+		@media screen and (max-width: 980px) {
+
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			button,
+			.button-1 {
+				font-size: 0.9rem;
+				height: 3.25rem;
+				line-height: 3.25rem;
+			}
+
+				input[type="submit"].large,
+				input[type="reset"].large,
+				input[type="button"].large,
+				button.large,
+				.button-1.large {
+					font-size: 1rem;
+					height: 3.75rem;
+					line-height: 3.75rem;
+				}
+
+		}
+
+		input[type="submit"].disabled, input[type="submit"]:disabled,
+		input[type="reset"].disabled,
+		input[type="reset"]:disabled,
+		input[type="button"].disabled,
+		input[type="button"]:disabled,
+		button.disabled,
+		button:disabled,
+		.button-1.disabled,
+		.button-1:disabled {
+			pointer-events: none;
+			opacity: 0.25;
+		}
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button-1 {
+		background-color: transparent;
+		box-shadow: inset 0 0 0 2px #212931;
+		color: #212931 !important;
+	}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		button:hover,
+		.button-1:hover {
+			box-shadow: inset 0 0 0 2px #18bfef;
+			color: #18bfef !important;
+		}
+
+		input[type="submit"].primary,
+		input[type="reset"].primary,
+		input[type="button"].primary,
+		button.primary,
+		.button-1.primary {
+			background-color: #212931;
+			box-shadow: none;
+			color: #ffffff !important;
+		}
+
+			input[type="submit"].primary:hover,
+			input[type="reset"].primary:hover,
+			input[type="button"].primary:hover,
+			button.primary:hover,
+			.button-1.primary:hover {
+				background-color: #18bfef;
 			}
 
 /* Banner */
@@ -2810,15 +3022,17 @@ input, select, textarea {
 /* Mobile */
 
 	#navPanel, #titleBar {
-		display: none;
+		display: inline-flex;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width:736px) {
 
 		/* Basic */
 
 			html, body {
 				overflow-x: hidden;
+				width: 100%;
+				height: 100%;
 			}
 
 			body, input, textarea, select {
@@ -2980,7 +3194,7 @@ input, select, textarea {
 						text-rendering: auto;
 						line-height: 1;
 						text-transform: none !important;
-						font-family: 'Font Awesome 5 Free';
+						font-family: 'Cinzel Decorative';
 						font-weight: 900;
 					}
 
@@ -3037,8 +3251,8 @@ input, select, textarea {
 					left: 0;
 					top: 0;
 					width: 100%;
-					height: 100%;
-					background: url("../../images/background.jpg");
+					height: 15%;
+					background: black;
 					background-size: 128px 128px;
 				}
 
@@ -3147,7 +3361,7 @@ input, select, textarea {
 			body.homepage #header {
 				min-height: 0;
 				padding: 5.5em 0 5em 0;
-				height: auto;
+				height: 100%;
 			}
 
 				body.homepage #header:before {

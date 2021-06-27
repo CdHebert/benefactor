@@ -1,33 +1,88 @@
-<div class="header1">
-    <div class="new">
-        <div>
-            <input class="input" type="text" placeholder="Text input">
+{{!-- userlist --}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/list-assets/assets/css/main.css" />
+<link rel="stylesheet" href="/stylesheets/css/search.css" />
+<link rel="stylesheet" href="/stylesheets/css/your-list.css" />
+<noscript>
+    <link rel="stylesheet" href="/list-assets/assets/css/noscript.css" />
+</noscript>
+
+
+<body>
+
+
+
+
+    <div id="main">
+
+        {{> header}}
+
+        <h2 style="text-align: center;">Welcome to Your List Page</h2>
+
+        <!-- Search -->
+        <section id="search-sec">
+            <input id="search-form" class="input is-rounded" type="text" placeholder="Search for lists">
+            <div id="suggestion-cont"></div>
+        </section>
+
+        <section style="overflow-x: hidden;">
+            <h4 class="subtitle is-4">Lists</h4>
+            <div id="add-list-icon" class="is-flex is-justify-content-center is-align-items-center mt-4 mb-4">
+                <i class="fa fa-plus"></i>
+            </div>
+        </section>
+
+        <!-- Lists -->
+        <section id="registries" class="posts" >
+            
+            {{#each lists as |list|}}
+            <article class="registry">
+                <h2 id="{{list_name}}"> {{list_name}} </h2>  
+                <a href="userlist/list/{{id}}" class="image fit"><img src="/images/{{list_name}}.jpg" alt="" /></a>
+                <ul class="actions special">
+                    <li><a href="userlist/list/{{id}}" class="button large">Look At List</a></li>
+                </ul>
+            </article>
+         
+            {{/each}}
+        </section>
+        <div id="add-list-modal" class="modal">
+            <div id="ad-md-background" class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head is-flex is-align-items-center">
+                    <p class="modal-card-title">Add a list</p>
+                </header>
+                <section class="modal-card-body">
+                    <form id="add-list-form">
+                        <div class="li-inp">
+                            <label for="lists">Select from Lists below</label>
+                            <select name="lists" id="lists">
+                                <option value="">Drop Down<i class="fas fa-arrow-down"></i></option>
+                                <option value="personal">Personal</option>
+                                <option value="gaming">Gaming</option>
+                                <option value="school">School</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="graduation">Graduation</option>
+                                <option value="special-event">Special Event</option>
+                            </select>
+
+                        </div>
+                        <button type="submit" class="button is-medium is-fullwidth">Add to your list</button>
+                    </form>
+                </section>
+            </div>
         </div>
-    </div>
-</div>
 
-<nav id="nav">
-    <ul>
-        <li><a href="/dashboard">Home</a></li>
-        <li><a href="/about">About Us</a></li>
 
-        <li>
-            <a href="#">Dropdown</a>
-            <ul>
-                <li><a href="/friendlist">Friends Lists</a></li>
-                <li><a href="/userlist">Your Lists</a></li>
-                <li><a id="logout">Logout</a></li>
-
-            </ul>
-        </li>
-    </ul>
-</nav>
-
-<main>
-    <section class="left-flex-view">
-        {{> friends-list}}
-    </section>
-    <aside class="right-flex-view">
-        {{> product-info}}
-    </aside>
-</main>
+        <!-- Scripts -->
+        <script src="/list-assets/assets/js/jquery.min.js"></script>
+        <script src="/list-assets/assets/js/jquery.scrollex.min.js"></script>
+        <script src="/list-assets/assets/js/jquery.scrolly.min.js"></script>
+        <script src="/list-assets/assets/js/browser.min.js"></script>
+        <script src="/list-assets/assets/js/breakpoints.min.js"></script>
+        <script src="/list-assets/assets/js/util.js"></script>
+        <script src="/list-assets/assets/js/main.js"></script>
+        <script src="/javascript/your-list.js"></script>

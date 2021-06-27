@@ -1,14 +1,26 @@
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/stylesheets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/stylesheets/css/noscript.css" /></noscript>
+	</head>
+	
+
+
+
+
 <body class="homepage is-preload">
 	<div id="page-wrapper">
 
 		<!-- Header -->
 		<div id="header">
-
+			{{#if loggedIn}}
 			<!-- Inner -->
+			{{else}}
 			<div class="inner">
 				<header>
 					<h1><a href="/dashboard" id="logo">Benefactor</a></h1>
-					<hr class="hr-1" />
+					<hr class="hr" />
 					<p>Get Ready for your gifts</p>
 				</header>
 				<footer>
@@ -16,34 +28,37 @@
 				</footer>
 			</div>
 
+			{{/if}}
 			<!-- Nav -->
-			
+
 			{{#if loggedIn}}
-	<nav id="nav">
+			<nav id="nav">
 
 				<ul>
 					<li><a href="/dashboard">Home</a></li>
 					<li><a href="/about">About Us</a></li>
-					<li>
-						<a href="#">Dropdown</a>
-						<ul>
-							<li><a href="/friends">Friends Lists</a></li>
-							<li><a href="#">Your Lists</a></li>
-							<li><a id="logout">Logout</a></li>
+					
 
-							{{!-- <li>
-								<a href="#">And a submenu &hellip;</a>
-								<ul>
-									<li><a href="#">Lorem ipsum dolor</a></li>
-									<li><a href="#">Phasellus consequat</a></li>
-									<li><a href="#">Magna phasellus</a></li>
-									<li><a href="#">Etiam dolore nisl</a></li>
-								</ul> --}}
-								
-							{{!-- </li> --}}
-							
-						</ul>
+					{{!-- <li><a href="/friendlist">Friends Lists</a></li> --}}
+					<li><a href="/userlist">Your Lists</a></li>
+					<li><a id="logout">Logout</a></li>
+
+					{{!-- <li>
+						<a href="#">And a submenu &hellip;</a>
+						<ul>
+
+							<li><a href="#">Lorem ipsum dolor</a></li>
+							<li><a href="#">Phasellus consequat</a></li>
+							<li><a href="#">Magna phasellus</a></li>
+							<li><a href="#">Etiam dolore nisl</a></li>
+						</ul> --}}
+
+						{{!--
+					</li> --}}
+
+
 					{{!-- </li> --}}
+
 
 					<!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
@@ -54,7 +69,7 @@
 			<nav id="nav">
 
 				<ul>
-					<li><a href="/about">About Us </a></li>
+					<li class="hvr-glow"><a class="hvr" href="/about">About Us </a></li>
 
 				</ul>
 			</nav>

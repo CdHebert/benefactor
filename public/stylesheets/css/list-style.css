@@ -43,7 +43,9 @@ main {
 
 .right-flex-view {
     background-color: #F1F6F9;
-    flex: 75%
+    flex: 75%;
+   
+    
 }
 
 .footer{
@@ -53,6 +55,7 @@ main {
 
 .product-items {
     padding: 1%;
+    
 }
 
 .is-wrap {

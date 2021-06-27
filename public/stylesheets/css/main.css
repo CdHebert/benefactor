@@ -63,6 +63,10 @@
 	background-image: grey;
 }
 
+* {
+	font-family: 'Cinzel Decorative';
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -143,7 +147,7 @@ input, select, textarea {
 		color: #5b5b5b;
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Cinzel Decorative', sans-serif;
 		font-weight: 300;
 	}
 
@@ -161,7 +165,7 @@ input, select, textarea {
 	input, textarea, select {
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Cinzel Decorative', sans-serif;
 		font-weight: 300;
 	}
 
@@ -205,18 +209,14 @@ input, select, textarea {
 	}
 
 	a {
-		color: inherit;
-		border-bottom: solid 1px rgba(128, 128, 128, 0.15);
-		text-decoration: none;
-		-moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		-webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		-ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		color: #212931;
+		border-bottom-color: rgba(33, 41, 49, 0.5);
+		font-family: 'Cinzel Decorative'
 	}
 
 		a:hover {
-			color: #ef8376;
 			border-bottom-color: transparent;
+			color: #efeb18  !important;
 		}
 
 	sub {
@@ -324,7 +324,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 400px) {
+		@media screen and (max-width: 700px) {
 
 			.container {
 				width: 100%;
@@ -1555,7 +1555,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 400px) {
+		@media screen and (max-width: 700px) {
 
 			.row {
 				display: flex;
@@ -1994,7 +1994,7 @@ input, select, textarea {
 			}
 
 				ul.icons li a:hover {
-					color: #ef8376;
+					color: #efeb18;
 				}
 
 /* Form */
@@ -2181,7 +2181,7 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'Cinzel Decorative';
 			font-weight: 400;
 		}
 
@@ -2199,7 +2199,7 @@ input, select, textarea {
 		}
 
 		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
+			font-family: 'Cinzel Decorative';
 		}
 
 		.icon.circled {
@@ -2532,7 +2532,7 @@ input, select, textarea {
 		border-radius: 0;
 		cursor: pointer;
 		display: inline-block;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: 'Cinzel Decorative' , Helvetica, sans-serif;
 		font-size: 0.8rem;
 		font-weight: 900;
 		letter-spacing: 0.075em;
@@ -3022,15 +3022,17 @@ input, select, textarea {
 /* Mobile */
 
 	#navPanel, #titleBar {
-		display: none;
+		display: inline-flex;
 	}
 
-	@media screen and (max-width:400px) {
+	@media screen and (max-width:736px) {
 
 		/* Basic */
 
 			html, body {
 				overflow-x: hidden;
+				width: 100%;
+				height: 100%;
 			}
 
 			body, input, textarea, select {
@@ -3192,7 +3194,7 @@ input, select, textarea {
 						text-rendering: auto;
 						line-height: 1;
 						text-transform: none !important;
-						font-family: 'Font Awesome 5 Free';
+						font-family: 'Cinzel Decorative';
 						font-weight: 900;
 					}
 
@@ -3249,8 +3251,8 @@ input, select, textarea {
 					left: 0;
 					top: 0;
 					width: 100%;
-					height: 100%;
-					background: url("../../images/wavey.jpg");
+					height: 15%;
+					background: black;
 					background-size: 128px 128px;
 				}
 
@@ -3359,7 +3361,7 @@ input, select, textarea {
 			body.homepage #header {
 				min-height: 0;
 				padding: 5.5em 0 5em 0;
-				height: auto;
+				height: 100%;
 			}
 
 				body.homepage #header:before {

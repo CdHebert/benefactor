@@ -60,7 +60,7 @@
   }
   
 .bg-img {
-	background-image: url('../../images/rodion-kutsaev-F573ZRbKOEw-unsplash.jpg');
+	background-image: grey;
 }
 
 html, body, div, span, applet, object,
@@ -324,7 +324,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 400px) {
 
 			.container {
 				width: 100%;
@@ -1555,7 +1555,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 400px) {
 
 			.row {
 				display: flex;
@@ -3025,7 +3025,7 @@ input, select, textarea {
 		display: none;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width:400px) {
 
 		/* Basic */
 
@@ -3250,7 +3250,7 @@ input, select, textarea {
 					top: 0;
 					width: 100%;
 					height: 100%;
-					background: url("../../images/background.jpg");
+					background: url("../../images/wavey.jpg");
 					background-size: 128px 128px;
 				}
 

@@ -1,7 +1,7 @@
 
 
 # Benefactor
-
+![open_page](./public/images/readme/opening.png)
 ## Description
 
 Benefactor is a gift giving registry designed to make gift buying fun. Benefactor includes an element of surprise which allows the user to gift randomly to others.
@@ -12,11 +12,15 @@ Benefactor utilizes a user login and password to allow for customization of priv
 
 - [Installation](#installation)
 - [Contributing](#contributing)
+- [Visuals](#visuals)
+- [Technologies](#technologies)
+- [Roadmap](#roadmap)
 - [Tests](#test)
 - [Links](#links)
 - [Questions](#questions)
 - [License](#license)
 - [Author](#author)
+- [Project Status](#project-status)
 
 ## Installation
 
@@ -24,10 +28,19 @@ npm install from package.json, then login to mysql, do a SOURCE db/schema.sql, q
 
 ## Contributing
 
-Daniel Baffour, Christi-Lee Currier, Cody Hebert, Matthew Kaus all contributed to this project. this is a private project and would like to continue building 
+Daniel Baffour, Christi-Lee Currier, Cody Hebert, Matthew Kaus all contributed to this project. this is a private project and would like to continue building, if new contributing would like to be done please contact Cody Hebert at his email below.
 
+## Visuals
+Trending page
+![open_page](./public/images/readme/trending.png)
 
-## Technologies Used
+Your list page
+![open_page](./public/images/readme/lists.png)
+
+List Product page
+![open_page](./public/images/readme/products.png)
+
+## Technologies
 * Bulma
 * Cloudinary
 * Express
@@ -72,7 +85,7 @@ If you have any questions feel free to either email me the question:
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Authors and Acknowledgement
+## Authors
 
 Benefactor is the brainchild and representation of collaboration of a team of developers working 100% remotely. 
 
